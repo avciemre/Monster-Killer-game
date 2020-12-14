@@ -51,16 +51,16 @@ const MONSTER_ATTACK_VALUE = 14;
 const HEAL_VALUE = 20;
 const enteredValue = prompt('Maximum life for you and the monster.', '100');
 
-if (isNaN(chosenMaxLife) || chosenMaxLife <= 0) {
-    chosenMaxLife = 100;
-}
-
 let chosenMaxLife = parseInt(enteredValue);
 let currentMonsterHealth = chosenMaxLife;
 let currentPlayerHealth = chosenMaxLife;
 let hasBonusLife = true;
 
 adjustHealthBars(chosenMaxLife);
+
+if (isNaN(chosenMaxLife) || chosenMaxLife <= 0) {
+    chosenMaxLife = 100;
+}
 
 //reset game after end game
 function reset() {
