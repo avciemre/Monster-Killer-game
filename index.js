@@ -22,6 +22,7 @@ let hasBonusLife = true;
 let battleLog = [];
 
 adjustHealthBars(chosenMaxLife);
+
 //logging game entries
 function writeLog(event, value, monsterHealth, playerHealth) {
     //let logEntry; //for the longer code
