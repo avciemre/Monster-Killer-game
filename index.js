@@ -218,8 +218,33 @@ function healPlayerHandler() {
     writeLog(LOG_EVENT_PLAYER_HEAL, healValue, currentMonsterHealth, currentPlayerHealth);
     endRound();
 }
+// using for/for-of/for-in loops
 function printLogHandler() {
-    console.log(battleLog);
+    //for (let i = 0; i < 3; i++) {
+    //    console.log('-------------');
+    //}
+
+    //for (let = i = 0; i< battleLog.length; i++){
+    //    console.log(battleLog[i]);
+    //} this is the longer version of the next for loop (for-of loop)
+    //let i = 0;
+    //for ( const logEntry of battleLog) {
+    //    console.log(logEntry);
+    //    console.log(i);
+    //    i++;
+    //}
+    let i = 0;
+    for (const logEntry of battleLog) {
+        console.log(`@${i}`);
+        for (const key in logEntry) {
+            //console.log(key);
+            //console.log(logEntry[key]); 
+            console.log(`${key} => ${logEntry[key]}`); //more readable in console
+        }
+        i++;
+    }
+
+    //console.log(battleLog);
 }
 
 attackBtn.addEventListener('click', attackHandler);
